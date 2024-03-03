@@ -1,0 +1,12 @@
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/FearlessOnes.jpeg', 'Cobain', 'A charcoal drawing of Kurt Cobain', 'A commissioned drawing of Kurt Cobain.', '18" x 24"', 'Charcoal on paper');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/MyHeartWasRacing.JPG?t=2024-02-29T18%3A11%3A03.950Z', 'Cybertruck', 'An homage to the truck of the future', 'This beaded postcard of Shiprock was made to honor my ancestral homeland.', '4" x 4"', 'Charcoal on paper');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/empire.jpeg?t=2024-02-29T18%3A11%3A15.035Z', 'Exhausted', 'A beaded "painting" of Utah', 'This piece took 500 hours to create. It represents the spectrum of flora, fauna and cultures within Utah.', '13" x 17"', 'Charcoal and enamel paint on paper');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/mechanismsofyouth.jpeg?t=2024-02-29T18%3A11%3A25.698Z', 'Vanimal: The Desert Rose', 'A beaded medallion of my old camper van', 'My old Dodge van which I traveled the western US in', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/spectralmetropolisbreezes.jpeg?t=2024-02-29T18%3A11%3A39.217Z', 'X Medallion', 'A beaded medallion for Exene Cervenka of X', 'A beaded medallion commissioned for Exene Cervenka of the punk band, X', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(3, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Painting/goodmedicine.jpeg', 'Medicine Wheels', 'Beaded medicine wheel pins', 'Beaded medicine wheel pins I made for the Urban Indian Center of Salt Lake City. The pins were given to graduates of their substance abuse program.', '1.5" x 1.5"', 'size 13 seed beads');

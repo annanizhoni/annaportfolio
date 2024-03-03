@@ -1,0 +1,18 @@
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/Vicious.JPG', 'Beadings From San Francisco', 'A beaded postcard of the Golden Gate Bridge', 'This beaded postcard of the Golden Gate Bridge was made to honor my time living in my van in San Francisco.', '2" x 4"', 'size 10 and 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/exhausted.jpeg?t=2024-02-29T20%3A36%3A33.909Z', 'Sunrise at Tsé Bitʼaʼí', 'A beaded postcard of Shiprock', 'This beaded postcard of Shiprock was made to honor my ancestral homeland.', '2" x 4"', 'size 10 and 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/iwilldelivertheexplosion.jpeg', 'DiasporUtah', 'A beaded "painting" of Utah', 'This piece took 500 hours to create. It represents the spectrum of flora, fauna and cultures within Utah.', '13" x 17"', 'size 10 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/rothfink.JPG?t=2024-02-29T20%3A37%3A03.982Z', 'Vanimal: The Desert Rose', 'A beaded medallion of my old camper van', 'My old Dodge van which I traveled the western US in', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/staroflife.jpg', 'X Medallion', 'A beaded medallion for Exene Cervenka of X', 'A beaded medallion commissioned for Exene Cervenka of the punk band, X', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/throne.jpg', 'Medicine Wheels', 'Beaded medicine wheel pins', 'Beaded medicine wheel pins I made for the Urban Indian Center of Salt Lake City. The pins were given to graduates of their substance abuse program.', '1.5" x 1.5"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/meineke.jpg?t=2024-02-29T20%3A41%3A43.579Z', 'Vanimal: The Desert Rose', 'A beaded medallion of my old camper van', 'My old Dodge van which I traveled the western US in', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/welcome.jpeg?t=2024-02-29T20%3A42%3A08.797Z', 'X Medallion', 'A beaded medallion for Exene Cervenka of X', 'A beaded medallion commissioned for Exene Cervenka of the punk band, X', '6" x 6"', 'size 13 seed beads');
+INSERT INTO images (category_id, url, title, description, detaileddesc, size, medium) VALUES
+(4, 'https://niybpkzfotwxowffxpps.supabase.co/storage/v1/object/public/artphotos/Pinstriping/whispers.JPG?t=2024-02-29T20%3A42%3A19.982Z', 'Medicine Wheels', 'Beaded medicine wheel pins', 'Beaded medicine wheel pins I made for the Urban Indian Center of Salt Lake City. The pins were given to graduates of their substance abuse program.', '1.5" x 1.5"', 'size 13 seed beads');

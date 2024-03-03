@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  min-height: 100vh;
+  font-family: 'Quicksand', sans-serif; /* Example of applying one of the imported fonts */
+  margin: 0;
+}
+
+/* Custom CSS for the masonry grid layout */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -1rem; /* Controls the overall left margin of the grid */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 1rem; /* This padding creates the gap between columns */
+  background-clip: padding-box;
+}
+
+/* Add vertical spacing between items */
+.my-masonry-grid_column > div {
+  margin-bottom: 1rem; /* Adjust this value for vertical spacing between items */
+}
+
+/* Additional styling for image items and responsiveness */
+.image-item img {
+  display: block; /* Ensures images are block level for correct display */
+  width: 100%; /* Ensures images take up the full width of their container */
+  height: auto; /* Keeps image aspect ratio intact */
+}
+
+.image-item p {
+  text-align: center; /* Centers text descriptions */
+  padding: 0.5rem; /* Adds padding around text for better readability */
+}
