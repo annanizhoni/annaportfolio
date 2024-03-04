@@ -29,7 +29,7 @@ function Home() {
       </div>
       <div className="flex justify-between mt-4">
         <div className="font-quicksand text-center mx-auto max-w-4xl p-4">
-          <p>Member of the Navajo Nation from Utah with a diverse skillset including web development, fine art, classical piano, wilderness survival, and auto mechanics. Community-minded problem solver who discovered a passion for computer science through Google's user experience course.</p>
+          <p>Member of the Navajo Nation from Utah with a diverse skillset including web development, fine art, classical piano, wilderness survival, and auto mechanics. Community-minded artist who discovered a passion for computer science through Google's UX design course.</p>
         </div>
       </div>
       {/* Slideshow */}
