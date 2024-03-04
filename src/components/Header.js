@@ -33,7 +33,7 @@ function Header() {
   return (
     <header onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="relative">
       <Link to="/">
-        <img src="/Header.svg" alt="Header" className="w-full h-auto" />
+        <img src="/Header.svg" alt="Header" className="w-full object-cover" />
         <div
           className={`absolute p-1 bg-white text-black text-xs shadow-md transition-opacity ${
             showTooltip ? 'opacity-100' : 'opacity-0'
