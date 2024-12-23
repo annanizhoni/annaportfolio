@@ -16,17 +16,6 @@ function Home() {
 
   return (
     <div className="mt-8">
-      <div className="flex justify-center my-8">
-        <iframe 
-          width="560" 
-          height="315" 
-          src="https://www.youtube.com/embed/3a_qljWEl5k?si=E79sBAYIkKubFtUL" 
-          title="YouTube video player" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowFullScreen
-        ></iframe>
-      </div>
       <div className="flex justify-between mt-4">
         <div className="font-quicksand text-center mx-auto max-w-4xl p-4">
           <p>Member of the Navajo Nation from Utah with a diverse skillset including web development, fine art, classical piano, wilderness survival, and auto mechanics. Community-minded artist who discovered a passion for computer science through Google's UX design course.</p>
@@ -52,7 +41,7 @@ function Home() {
           </div>
         </Slider>
       </div>
-      </div>
+    </div>
   );
 }
 
