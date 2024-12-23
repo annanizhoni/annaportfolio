@@ -30,10 +30,10 @@ export default async function handler(req, res) {
     });
 
     await transporter.sendMail({
-      from: `"Anna" <${process.env.ZOHO_USER}>`,
+      from: `"Anna Nizhoni" <${process.env.ZOHO_USER}>`,
       to: email,
-      subject: "Thank you for contacting me!",
-      text: `Hi ${name},\n\nThank you for reaching out! I’ve received your message: "${message}". I will get back to you within 24 hours.\n\nWarm Regards,\nAnna`,
+      subject: "Hello",
+      text: `Hi ${name},\n\nThank you for reaching out! I’ve received your message: "${message}". I will get back to you within 24 hours.\n\nWarm Regards,\nAnna Nizhoni`,
     });
 
     res.status(200).json({ message: "Message sent successfully!" });
