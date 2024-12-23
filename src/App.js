@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         <div className="flex-grow">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Portfolio />} />
             <Route path="/portfolio" element={<Portfolio />} />
             {/* Keep this route as is for categorySlug */}
             <Route path="/portfolio/:categorySlug" element={<Gallery />} />
