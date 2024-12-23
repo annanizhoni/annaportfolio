@@ -18,7 +18,7 @@ function Home() {
     <div className="mt-8">
       <div className="flex justify-between mt-4">
         <div className="font-quicksand text-center mx-auto max-w-4xl p-4">
-          <p>Member of the Navajo Nation from Utah with a diverse skillset including web development, fine art, classical piano, wilderness survival, and auto mechanics. Community-minded artist who discovered a passion for computer science through Google's UX design course.</p>
+          <p>Navajo artist and musician from Park City, Utah. I work in a wide variety of artistic disciplines, inluding: charcoal realism, oil and acrylic painting, Native American beadwork, illustration, digital art, graphic design, pinstriping and printmaking.</p>
         </div>
       </div>
       {/* Slideshow */}
