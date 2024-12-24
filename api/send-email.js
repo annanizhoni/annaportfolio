@@ -33,7 +33,7 @@ export default async function handler(req, res) {
       from: '"Anna Nizhoni" <' + process.env.ZOHO_USER + '>',
       to: email,
       subject: "Hello",
-      text: `Hi ${name},\n\nThank you for reaching out! I’ve received your message: "${message}". I will get back to you within 24 hours.\n\nWarm Regards,\nAnna Nizhoni`,
+      text: `Hi ${name},\n\nThank you for reaching out! I’ve received your message: "${message}". I will get back to you within 24 hours.`,
     });    
 
     res.status(200).json({ message: "Message sent successfully!" });

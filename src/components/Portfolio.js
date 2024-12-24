@@ -42,8 +42,8 @@ const Portfolio = () => {
       <div className="flex justify-between mt-4">
         <div className="font-quicksand text-center mx-auto max-w-4xl p-4">
           <p>
-            Navajo artist and musician from Park City, Utah working in a wide variety of artistic disciplines, including: <br />
-            charcoal realism, oil and acrylic painting, Native American beadwork, illustration, digital art, graphic design, pinstriping, and printmaking.
+            Navajo artist and musician from Park City, Utah working in a wide variety of creative disciplines, including: <br />
+            charcoal realism, oil and acrylic painting, Native American beadwork, illustration, pinstriping, digital art, graphic design, and web development.
           </p>
         </div>
       </div>
