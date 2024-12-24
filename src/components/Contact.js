@@ -43,7 +43,7 @@ const Contact = () => {
     <main>
       <div className="container mx-auto py-12">
         <div className="contact-container max-w-lg mx-auto bg-white p-8 shadow-lg">
-          <h1 className="text-3xl font-bold text-gray-800 mb-4 font-barrio">Contact</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-4 font-barrio">Contact</h1>
           {successMessage && <p className="text-green-600 mb-4 font-quicksand">{successMessage}</p>}
           {error && <p className="text-red-600 mb-4 font-quicksand">{error}</p>}
           <div className="contact-form font-quicksand">
@@ -90,9 +90,9 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className={`bg-[#00748C] text-white font-semibold py-2 px-4 ${
-                  isLoading ? 'cursor-not-allowed opacity-50' : 'hover:bg-[#003844]'
-                } focus:outline-none focus:ring focus:ring-[#00748C] focus:ring-opacity-50`}
+                className={`bg-[#00748C] text-white text-sm py-2 px-4 rounded-md hover:bg-[#005766] transition ${
+                  isLoading ? 'cursor-not-allowed opacity-50' : ''
+                }`}
               >
                 Submit
               </button>

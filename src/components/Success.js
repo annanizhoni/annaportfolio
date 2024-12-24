@@ -24,7 +24,7 @@ const Success = () => {
         </p>
         <button
           onClick={handleReturnToShop}
-          className="bg-[#00748C] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#005766]"
+          className="bg-[#00748C] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#005766] transition"
         >
           Return to Shop
         </button>
