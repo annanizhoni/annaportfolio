@@ -10,7 +10,7 @@ function Header() {
     if (showTooltip) {
       timeoutId = setTimeout(() => {
         setShowTooltip(false);
-      }, 800); 
+      }, 800);
     }
     return () => clearTimeout(timeoutId);
   }, [showTooltip]);
@@ -31,14 +31,27 @@ function Header() {
   };
 
   return (
-    <header onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="relative">
+    <header
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative w-full overflow-hidden" // Use w-full to span the full width of its parent
+    >
       <Link to="/">
-        <img src="/Header.svg" alt="Header" className="w-full object-cover" />
+        <img
+          src="/Header.svg"
+          alt="Header"
+          className="w-full h-auto object-cover" // Ensure the image spans full width and maintains aspect ratio
+        />
         <div
           className={`absolute p-1 bg-white text-black text-xs shadow-md transition-opacity ${
             showTooltip ? 'opacity-100' : 'opacity-0'
           }`}
-          style={{ top: tooltipPosition.y, left: tooltipPosition.x + 30, transform: 'translate(-50%, 0)', zIndex: 50 }}
+          style={{
+            top: tooltipPosition.y,
+            left: tooltipPosition.x + 30,
+            transform: 'translate(-50%, 0)',
+            zIndex: 50,
+          }}
         >
           Home {/* Tooltip text */}
         </div>

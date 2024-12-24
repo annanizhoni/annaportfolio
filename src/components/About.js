@@ -6,21 +6,13 @@ const About = () => {
       {/* About Section */}
       <div className="text-content mb-12 px-6 md:px-12">
         <p className="text-base font-quicksand text-center leading-relaxed">
-          I am a lifelong artist and musician with a diverse skillset.
-          From charcoal drawing to beadwork, illustration to pinstriping, I have honed
-          my artistic skills over the years and explored a wide range of mediums. As a
-          musician I am proficient in classical piano and banjo, but have learned many other instruments including violin, guitar, and accordion.
+          I am a lifelong artist and musician with a diverse skill set. From charcoal drawing to beadwork, illustration to pinstriping, I have honed my artistic skills and explored various mediums over the years. As a musician, I am proficient in classical piano and banjo but have learned many other instruments, including violin, guitar, and accordion.
           <br />
           <br />
-          In addition to traditional art, I also have a love for computer science and am eager to learn how to integrate it with my art. 
-          The potential to create in exciting, innovative ways using technology inspires me to keep pushing myself to understand more of this complex discipline.
+          Along with my passion for traditional art, I also have a strong interest in computer science and am eager to integrate it with my creative pursuits. The potential to create art in exciting and innovative ways through technology motivates me to deepen my understanding of this complex field.
           <br />
           <br />
-          As a polymath and member of the Navajo Nation, I bring a unique perspective to everything I do. I am
-          passionate about giving back to my community and have created art to support
-          Indigenous and environmental non-profits throughout Utah. From advocating for
-          sacred lands to raising awareness for missing and murdered Indigenous women, my artwork has been a tool
-          for storytelling, connection, and positive change.
+          As a polymath and member of the Navajo Nation, I bring a unique perspective to everything I do. I am passionate about giving back to my community and have created art to support Indigenous and environmental non-profits throughout Utah. From advocating for sacred lands to raising awareness for missing and murdered Indigenous women, my artwork has been a tool for storytelling, connection, and positive change.
         </p>
       </div>
 
