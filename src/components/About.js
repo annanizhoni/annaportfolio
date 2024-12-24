@@ -7,14 +7,16 @@ const About = () => {
       <div className="text-content mb-12 px-6 md:px-12">
         <p className="text-base font-quicksand text-center leading-relaxed">
           I am a lifelong artist and musician with a diverse skillset.
-          From charcoal drawing to beadwork, graphic design to pinstriping, I have honed
+          From charcoal drawing to beadwork, illustration to pinstriping, I have honed
           my artistic skills over the years and explored a wide range of mediums. As a
           musician I am proficient in classical piano and banjo, but have learned many other instruments including violin, guitar, and accordion.
           <br />
           <br />
-          For several years, I lived in an old van; exploring the western United States and
-          immersing myself in the beauty of the natural world. As a polymath and member of
-          the Navajo Nation, I bring a unique perspective to everything I do. I am
+          In addition to traditional art, I also have a love for computer science and am eager to learn how to integrate it with my art. 
+          The potential to create in exciting, innovative ways using technology inspires me to keep pushing myself to understand more of this complex discipline.
+          <br />
+          <br />
+          As a polymath and member of the Navajo Nation, I bring a unique perspective to everything I do. I am
           passionate about giving back to my community and have created art to support
           Indigenous and environmental non-profits throughout Utah. From advocating for
           sacred lands to raising awareness for missing and murdered Indigenous women, my artwork has been a tool
