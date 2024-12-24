@@ -9,6 +9,8 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ArtDetail from './components/ArtDetail';
+import Success from './components/Success';
+import Failure from './components/Failure';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/success" element={<Success />} />
+            <Route path="/failure" element={<Failure />} />
           </Routes>
         </div>
         <Footer />

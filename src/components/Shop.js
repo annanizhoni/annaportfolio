@@ -1,23 +1,24 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { loadStripe } from '@stripe/stripe-js';
 import Masonry from 'react-masonry-css';
 import supabase from '../supabaseClient';
+import Cart from './Cart'; // Import the Cart component
+
+const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISHABLE_KEY);
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
-  const [email, setEmail] = useState(''); // State to store email input
+  const [cart, setCart] = useState(() => {
+    // Load cart from localStorage on initial render
+    const savedCart = localStorage.getItem('cart');
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data, error } = await supabase
-          .from('products')
-          .select('*');
-
-        if (error) {
-          throw error;
-        }
-
+        const { data, error } = await supabase.from('products').select('*');
+        if (error) throw error;
         setProducts(data);
       } catch (error) {
         console.error('Error fetching products:', error.message);
@@ -27,23 +28,41 @@ const Shop = () => {
     fetchProducts();
   }, []);
 
-  const handleEmailSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+  // Save cart to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart));
+  }, [cart]);
 
-    try {
-      const { error } = await supabase
-        .from('mailing_list') // Assuming your table is named 'mailing_list'
-        .insert([{ email: email }]);
-
-      if (error) {
-        throw error;
+  const handleAddToCart = (product) => {
+    setCart((prevCart) => {
+      const existingProduct = prevCart.find((item) => item.id === product.id);
+      if (existingProduct) {
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
       }
+      return [...prevCart, { ...product, quantity: 1 }];
+    });
+  };
 
-      // Provide feedback and reset the input field
-      alert('Thank you for joining my mailing list!');
-      setEmail(''); // Reset email input after successful submission
+  const handleRemoveFromCart = (productId) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
+  };
+
+  const handleCheckout = async () => {
+    try {
+      const stripe = await stripePromise;
+
+      const response = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ cart }),
+      });
+
+      const { id } = await response.json();
+      await stripe.redirectToCheckout({ sessionId: id });
     } catch (error) {
-      alert(error.message);
+      console.error('Error during checkout:', error.message);
     }
   };
 
@@ -55,32 +74,39 @@ const Shop = () => {
   };
 
   return (
-    <div>
-      {/* The rest of your component remains unchanged */}
-      
-      {/* Updated section with onSubmit handler for email form */}
-      <div className="flex justify-center items-center my-8">
-        <div className="text-center p-4 shadow-lg max-w-md">
-          <h3 className="text-lg font-semibold mb-4">Shop is currently sold out.</h3>
-          <p className="mb-4">Please join the mailing list to be notified when new items are available.</p>
-          <form onSubmit={handleEmailSubmit} className="flex flex-col items-center">
-            <input
-              type="email"
-              placeholder="Enter your e-mail address"
-              className="px-4 py-2 text-sm text-gray-700 bg-white border rounded-md focus:outline-none focus:ring-2 focus:ring-[#00748C] focus:border-transparent w-full"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+    <div className="shop-container">
+      <h1 className="text-3xl font-barrio text-center my-8">Shop</h1>
+
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid flex w-auto"
+        columnClassName="my-masonry-grid_column"
+      >
+        {products.map((product) => (
+          <div key={product.id} className="p-4 shadow-lg rounded-md">
+            <img
+              src={product.image_url}
+              alt={product.name}
+              className="w-full h-auto rounded-md"
             />
+            <h2 className="text-lg font-bold mt-4">{product.name}</h2>
+            <p className="text-gray-600 my-2">${(product.price / 100).toFixed(2)}</p>
             <button
-              type="submit"
-              className="mt-4 px-6 py-2 text-sm font-semibold text-white bg-[#00748C] rounded-md hover:bg-[#005766] focus:outline-none focus:ring-2 focus:ring-[#005766]"
+              onClick={() => handleAddToCart(product)}
+              className="bg-[#00748C] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#005766]"
             >
-              Join
+              Add to Cart
             </button>
-          </form>
-        </div>
-      </div>
+          </div>
+        ))}
+      </Masonry>
+
+      {/* Cart Component */}
+      <Cart
+        cart={cart}
+        handleRemoveFromCart={handleRemoveFromCart}
+        handleCheckout={handleCheckout}
+      />
     </div>
   );
 };
